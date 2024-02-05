@@ -22,7 +22,7 @@ It's probably super unclear what any of these sketches mean, but the first two a
 <img width="400" src="https://github.com/spacejump3/web-app-from-scratch-2324/assets/112871518/3a26ac74-2ea3-4c9a-9dca-2503541a1ea8">
 <img width="400" src="https://github.com/spacejump3/web-app-from-scratch-2324/assets/112871518/5a3cce3f-0006-4fa1-9530-dc0d432dbed4">
 
-So you can scroll in this carrousel and click on a poster to see more information. I might drop the gradient because it looks weird but we'll see...
+So you can scroll in this carrousel and click on a poster to see more information. I might drop the gradient because it looks kinda weird but we'll see...
 
 Sources day 1:
 
