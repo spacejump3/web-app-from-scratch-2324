@@ -24,9 +24,17 @@ It's probably super unclear what any of these sketches mean, but the first two a
 
 So you can scroll in this carrousel and click on a poster to see more information. I might drop the gradient because it looks kinda weird but we'll see...
 
-Sources day 1:
+Finally, I managed to create an API call so that's working nicely as well!
 
+<img width="400" src="https://github.com/spacejump3/web-app-from-scratch-2324/assets/112871518/f41a2386-7869-4b9b-9609-73e6761847af">
+
+I do use an API key but I'm not sure how to hide it on GitHub with vanilla JavaScript... So for now I'm not pushing the API key to GitHub, but I'll need to work out if that's fine or not.
+
+#### Next steps:
+- Develop function so I can easily add movies to the url
+- Visually design page
+- First steps in creating the carrousel
+
+#### Sources day 1:
 - https://www.youtube.com/watch?v=ly4Dqz2Mz8s
 - https://www.slidemembers.com/en_US/view/PPT-Templates/movie-film-theme-slide-ppt-18270
-
-</details>
