@@ -40,11 +40,25 @@ I do use an API key but I'm not sure how to hide it on GitHub with vanilla JavaS
 - https://www.slidemembers.com/en_US/view/PPT-Templates/movie-film-theme-slide-ppt-18270
 
 ### Day 2 - Continuing, styling, JSON
-Today was mostly about continuing where we left off yesterday. I mostly worked on the styling of the website and tried to make it responsive. I had to definitely get used to some stuff again. Like simple aligning and using flexbox and such. So I'm a bit slower than usual, but I am getting there. I haven't been able to get the API data to display on my page yet. We did have a small workshop which I hoped would expand on it, but it was sadly a bit too beginner friendly so my issue couldn't be talked about. 
+Today was mostly about continuing where we left off yesterday. I mostly worked on the styling of the website and tried to make it responsive. I had to definitely get used to some stuff again. Like simple aligning and using flexbox and such. So I'm a bit slower than usual, but I am getting there. I haven't been able to get the API data to display on my page yet. We did have a small workshop which I hoped would expand on it, but it was sadly a bit too beginner friendly so my issue couldn't be addressed today. In the meantime here's a screenshot of my current website:
+
+![image](https://github.com/spacejump3/web-app-from-scratch-2324/assets/112871518/7447dd6c-1935-4864-9020-78f435e32e51)
+
+You can't see it in the image, but I made the perferations animate so it looks like the entire filmstrip is rolling. So pretty nice progress, but I would like to really start displaying my API soon.
 
 #### Checklist
+Done:
+- Visually design page ✅
+
+To do:
 - Develop function so I can easily add movies to the url
 - Create carrousel
+- [New] Make movies clickable for more info
 
-#### sources day 2:
+### Day 3
+
+#### Checklist
+
+### Sources
+
 
