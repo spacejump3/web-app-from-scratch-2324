@@ -1,3 +1,96 @@
+html,
+body,
+p {
+    margin: 0;
+}
+
+html {
+    padding: 0;
+}
+
+main {
+    overflow: hidden;
+}
+
 body {
-    background-color: hotpink;
+    font-family: 'Overpass', 'Courier New', Courier, monospace;
+    background-color: #f0c838;
+}
+
+.introText {
+    width: 25em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+img:first-of-type {
+    margin: 0 3em 0 0;
+    width: 100%;
+    max-width: 20em;
+    height: 100%;
+
+    background-color: white;
+    box-shadow: 0.4em 0.4em 1em #0005;
+}
+
+h1 {
+    margin: 0 0 0.5em 0;
+    font-size: 3em;
+    font-weight: 900;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+section:nth-of-type(1) {
+    margin: 3em;
+    max-width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-120px);
+    }
+}
+
+.perfPattern {
+    margin: 0;
+    width: 150%;
+    overflow-x: hidden;
+    height: 3.5em;
+    background-image: url('../img/perf-pattern_Tekengebied 1.png');
+    background-size: 10em;
+    background-repeat: repeat-x;
+    animation: scrolling 3s linear infinite;
+}
+
+.movieContainer {
+    margin: 0;
+    height: 30em;
+    width: 100%;
+    background-color: #000;
+
+    display: flex;
+}
+
+.posterPlaceholder {
+    width: 20em;
+    height: 100%;
+    margin: 0 0 0 2em;
+    background-color: rgb(218, 198, 85);
+    border-radius: 1.2em;
+}
+
+footer {
+    margin: 2em 0 2em 0;
+    opacity: 0.5;
+    text-align: center;
 }
