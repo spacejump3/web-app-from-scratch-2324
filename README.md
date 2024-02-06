@@ -30,7 +30,7 @@ Finally, I managed to create an API call so that's working nicely as well!
 
 I do use an API key but I'm not sure how to hide it on GitHub with vanilla JavaScript... So for now I'm not pushing the API key to GitHub, but I'll need to work out if that's fine or not.
 
-#### Next steps:
+#### Checklist:
 - Develop function so I can easily add movies to the url
 - Visually design page
 - First steps in creating the carrousel
@@ -38,3 +38,13 @@ I do use an API key but I'm not sure how to hide it on GitHub with vanilla JavaS
 #### Sources day 1:
 - https://www.youtube.com/watch?v=ly4Dqz2Mz8s
 - https://www.slidemembers.com/en_US/view/PPT-Templates/movie-film-theme-slide-ppt-18270
+
+### Day 2 - Continuing, styling, JSON
+Today was mostly about continuing where we left off yesterday. I mostly worked on the styling of the website and tried to make it responsive. I had to definitely get used to some stuff again. Like simple aligning and using flexbox and such. So I'm a bit slower than usual, but I am getting there. I haven't been able to get the API data to display on my page yet. We did have a small workshop which I hoped would expand on it, but it was sadly a bit too beginner friendly so my issue couldn't be talked about. 
+
+#### Checklist
+- Develop function so I can easily add movies to the url
+- Create carrousel
+
+#### sources day 2:
+
