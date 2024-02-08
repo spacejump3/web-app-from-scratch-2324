@@ -105,10 +105,8 @@ poster.style.backgroundImage = `url(${data.Poster})`;
 Now it's working as intended!
 
 #### Expanding image toggle using JavaScript
-
 <!-- add more intro and text everywhere in this chapter please -->
-
-Not working code:
+I wanted to make a function which will expand the poster image if I click on it, and go back to it's original state if I click on it again. I tried to make it work like this at first:
 
 ```js
 poster.addEventListener('click', function increaseMinWidth() {
@@ -121,16 +119,15 @@ poster.addEventListener('click', function decreaseMinWidth() {
     poster.classList.remove('extendedPoster');
 });
 ```
+The idea is that I add a class called ```extendedPoster``` when I click on it. This class has a greater width so it will expand. I also remove the original class. When I click on it again I want to do the same but opposite. This sadly doesn't work. The reason is because it only has a single class name initially called ```regularPoster```. After I click on it, it removes that class so when I click on it again it isn't able to recognize ```regularPoster``` because it is, well, gone. If I use one classname as my main class, and add another for the extended and regular versions, I can use it method properly. Here you can see how I did this:
 
-Code working correctly:
-
-change classname
+Change classname
 
 ```html
 <li class="moviePoster regularPoster"></li>
 ```
 
-change css
+Change css:
 
 ```css
 .moviePoster {
@@ -151,7 +148,7 @@ change css
 }
 ```
 
-change js
+Change js
 
 ```js
 poster.addEventListener('click', function changeMinWidth() {
@@ -166,6 +163,17 @@ poster.addEventListener('click', function changeMinWidth() {
 ```
 
 #### Checklist
+Done:
+
+-   Visually design page ✅
+-   Make movies clickable for more info ✅
+
+To do:
+
+-   Develop function so I can easily add movies to the url
+-   Create carrousel
+-   [new] Make page more responsive
+
 
 ### Sources
 
