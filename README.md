@@ -180,3 +180,29 @@ To do:
 -   https://dmitripavlutin.com/fetch-with-json/
 -   https://stackoverflow.com/questions/21496905/how-to-change-the-background-image-of-div-using-javascript
 -   Stef Keuken
+
+### Day 4 - More movie's and more struggles
+I've finally managed to add more movies! The way I did it, is to create an array of titles that I want to add. Then I can dynamically add those titles to the fetch link. I make sure to wait until all the fetches are done via a promise and when that's done, I display it on the page. I've had to do a lot of moving around in terms of functions, but at the end I got there. I do still have one issue however: whenever I click on a movie it expands, but every text shows simultaneously. In the screenshots you can see what I mean:
+
+![image](https://github.com/spacejump3/web-app-from-scratch-2324/assets/112871518/4f5fee7c-d8a1-4955-b5fc-badb3fe8334b)
+
+![image](https://github.com/spacejump3/web-app-from-scratch-2324/assets/112871518/5e5696de-6bd9-4b33-a0df-40cee8ff7297)
+
+It is almost the end of the week so I would like to be done so I can work on the teamwebsite. So hopefully I will be able to fix this by tomorrow.
+
+#### Clean code
+When trying to work on displaying multiple movies, Marten helped me a bit. He did tell me that some code can be made shorter, in particular the expand poster function. I wasn't able to make it cleaner today. So the plan is to make sure the app works correctly with my current code, and when that's done I will try to clean it as much as possible afterwards. 
+
+#### Checklist
+
+Done:
+
+-   Visually design page ✅
+-   Develop function so I can easily add movies to the url ✅
+-   Make movies clickable for more info ✅
+-   Make page more responsive ✅
+
+To do:
+
+-   [new] fix movie info issues
+-   Create carrousel
