@@ -20,12 +20,13 @@ body {
 
 .introText {
     width: 25em;
+    max-width: 100%;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 img:first-of-type {
-    margin: 0 3em 0 0;
+    margin: 0 3em 1em 0;
     width: 100%;
     max-width: 20em;
     height: 100%;
@@ -41,15 +42,26 @@ h1 {
 }
 
 h2 {
-    margin: 1em 0 0 0;
+    margin: .5em 0 0 0;
     color: #f0c838;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 900;
     text-shadow: 0.1em 0.1em 0.1em #0007;
 }
 
 p {
     font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+    section:nth-of-type(1) {
+        margin: 3em;
+        max-width: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 section:nth-of-type(1) {
@@ -115,7 +127,7 @@ ul {
 }
 
 #plot {
-    width: 10em;
+    width: 15em;
     display: inline-block;
 }
 
@@ -126,7 +138,7 @@ li p {
 #imdbRating {
     margin: 0;
     color: #f0c838;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 900;
     text-shadow: 0.1em 0.1em 0.1em #0007;
 }

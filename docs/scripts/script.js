@@ -1,64 +1,60 @@
-// JSON data
-const title = document.getElementById("title")
-const year = document.getElementById("year")
-const plot = document.getElementById("plot")
-const genre = document.getElementById("genre")
-const director = document.getElementById("director")
-const imdbRating = document.getElementById("imdbRating")
+// API key
+const apiKey = '54a87690'
 
-// Poster
-const poster = document.querySelector(".moviePoster")
+const favoriteMovies = ['memento', 'kill+bill', 'oppenheimer', 'rush+hour', `schindler's+list`, 'empire+strikes+back', 'arrival', 'shutter+island', 'se7en', 'fight+club', 'star+wars', 'django+unchained']
 
-// Movie info
-const movieInfo = document.querySelectorAll(".movieInfo")
+// testing w/ 1 movie
+// const favoriteMovies = ['memento']
 
-// fetching API JSON data
+// fetching API JSON data and adding my favorite movies
 async function getData() {
-    const response = await fetch('http://www.omdbapi.com/?apikey=54a87690&t=memento')
-    const data = await response.json();
-
-    console.log(data)
-
-    title.innerHTML = data.Title;
-    year.innerHTML = data.Year;
-    plot.innerHTML = data.Plot;
-    genre.innerHTML = data.Genre;
-    director.innerHTML = data.Director;
-    imdbRating.innerHTML = data.imdbRating;
-
-    poster.style.backgroundImage = `url(${data.Poster})`
-
-    if (poster.classList.contains('extendedPoster')) {
-        poster.style.backgroundImage = `linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0,0,0,1) 100%), url(${data.Poster})`
-    } else {
-        poster.style.backgroundImage = `url(${data.Poster})`
-    }
+    const promises = favoriteMovies.map(async title => {
+        const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${encodeURIComponent(title)}`);
+        return await response.json();
+    })
+    return Promise.all(promises)
 }
 
-// Toggle the width of moviePoster with a click
-poster.addEventListener("click", async function changeMinWidth() {
-    if (poster.classList.contains('regularPoster')) {
-        poster.classList.add('extendedPoster')
-        poster.classList.remove('regularPoster')
+async function displayMovies() {
+    const movieData = await getData()
+    const movieContainer = document.getElementById('movieListContainer')
 
-        movieInfo.forEach(function(element) {
-            element.classList.remove('hidden')
-            element.classList.add('visible')
-        })
+    movieData.forEach(data => {
+        const poster = document.createElement('li')
 
-        await getData()
-        
-    } else {
+        poster.classList.add('moviePoster')
         poster.classList.add('regularPoster')
-        poster.classList.remove('extendedPoster')
+        poster.innerHTML = `
+        <h2 id="title" class="movieInfo hidden">${data.Title}</h2>
+        <p id="year" class="movieInfo hidden">${data.Year}</p>
+        <p id="plot" class="movieInfo hidden">${data.Plot}</p>
+        <p id="genre" class="movieInfo hidden">Genre: ${data.Genre}</p>
+        <p id="director" class="movieInfo hidden">Director ${data.Director}</p>
+        <p id="imdbRating" class="movieInfo hidden">imdB Rating: ${data.imdbRating}</p>
+        `
+        poster.style.backgroundImage = `url(${data.Poster})`
+        poster.addEventListener("click", async function changeMinWidth() {
+            if (poster.classList.contains('regularPoster')) {
+                poster.classList.add('extendedPoster')
+                poster.classList.remove('regularPoster')
+        
+                document.querySelectorAll(".movieInfo").forEach(function(element) {
+                    element.classList.remove('hidden')
+                    element.classList.add('visible')
+                })
+                
+            } else {
+                poster.classList.add('regularPoster')
+                poster.classList.remove('extendedPoster')
+        
+                document.querySelectorAll(".movieInfo").forEach(function(element) {
+                    element.classList.remove('visible')
+                    element.classList.add('hidden')
+                })
+            }
+        });
+    movieContainer.appendChild(poster)
+    })
+}
 
-        movieInfo.forEach(function(element) {
-            element.classList.remove('visible')
-            element.classList.add('hidden')
-        })
-    }
-
-    await getData()
-});
-
-getData();
+displayMovies()
