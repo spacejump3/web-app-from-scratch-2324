@@ -1,26 +1,26 @@
-// API key
-const apiKey = '54a87690'
-
 const favoriteMovies = ['memento', 'kill+bill', 'oppenheimer', 'rush+hour', `schindler's+list`, 'empire+strikes+back', 'arrival', 'shutter+island', 'se7en', 'fight+club', 'star+wars', 'django+unchained']
 
-// testing w/ 1 movie
-// const favoriteMovies = ['memento']
+// // testing w/ 2 movie
+// const favoriteMovies = ['memento', 'rush+hour']
 
 // fetching API JSON data and adding my favorite movies
 async function getData() {
     const promises = favoriteMovies.map(async title => {
-        const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${encodeURIComponent(title)}`);
+        const response = await fetch(`https://www.omdbapi.com/?apikey=54a87690&t=${encodeURIComponent(title)}`);
         return await response.json();
     })
     return Promise.all(promises)
 }
 
+// function to display the movies fetched from the API
 async function displayMovies() {
     const movieData = await getData()
     const movieContainer = document.getElementById('movieListContainer')
 
     movieData.forEach(data => {
         const poster = document.createElement('li')
+
+        poster.setAttribute('tabIndex', '1')
 
         poster.classList.add('moviePoster')
         poster.classList.add('regularPoster')
@@ -33,12 +33,16 @@ async function displayMovies() {
         <p id="imdbRating" class="movieInfo hidden">imdB Rating: ${data.imdbRating}</p>
         `
         poster.style.backgroundImage = `url(${data.Poster})`
+
+        // function to change min-width on click
         poster.addEventListener("click", async function changeMinWidth() {
             if (poster.classList.contains('regularPoster')) {
                 poster.classList.add('extendedPoster')
                 poster.classList.remove('regularPoster')
+
+                poster.style.backgroundImage = `linear-gradient(90deg, rgba(45,33,245,0) 0%, rgba(0,0,0,1) 100%), url(${data.Poster})`
         
-                document.querySelectorAll(".movieInfo").forEach(function(element) {
+                poster.querySelectorAll(".movieInfo").forEach(function(element) {
                     element.classList.remove('hidden')
                     element.classList.add('visible')
                 })
@@ -46,8 +50,10 @@ async function displayMovies() {
             } else {
                 poster.classList.add('regularPoster')
                 poster.classList.remove('extendedPoster')
+
+                poster.style.backgroundImage = `url(${data.Poster})`
         
-                document.querySelectorAll(".movieInfo").forEach(function(element) {
+                poster.querySelectorAll(".movieInfo").forEach(function(element) {
                     element.classList.remove('visible')
                     element.classList.add('hidden')
                 })

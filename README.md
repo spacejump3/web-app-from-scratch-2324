@@ -65,8 +65,6 @@ To do:
 
 ### Day 3 - Struggling with API's and JavaScript...
 
-(insert intro here...)
-
 #### API image background
 
 ```js
@@ -105,7 +103,9 @@ poster.style.backgroundImage = `url(${data.Poster})`;
 Now it's working as intended!
 
 #### Expanding image toggle using JavaScript
+
 <!-- add more intro and text everywhere in this chapter please -->
+
 I wanted to make a function which will expand the poster image if I click on it, and go back to it's original state if I click on it again. I tried to make it work like this at first:
 
 ```js
@@ -119,7 +119,8 @@ poster.addEventListener('click', function decreaseMinWidth() {
     poster.classList.remove('extendedPoster');
 });
 ```
-The idea is that I add a class called ```extendedPoster``` when I click on it. This class has a greater width so it will expand. I also remove the original class. When I click on it again I want to do the same but opposite. This sadly doesn't work. The reason is because it only has a single class name initially called ```regularPoster```. After I click on it, it removes that class so when I click on it again it isn't able to recognize ```regularPoster``` because it is, well, gone. If I use one classname as my main class, and add another for the extended and regular versions, I can use it method properly. Here you can see how I did this:
+
+The idea is that I add a class called `extendedPoster` when I click on it. This class has a greater width so it will expand. I also remove the original class. When I click on it again I want to do the same but opposite. This sadly doesn't work. The reason is because it only has a single class name initially called `regularPoster`. After I click on it, it removes that class so when I click on it again it isn't able to recognize `regularPoster` because it is, well, gone. If I use one classname as my main class, and add another for the extended and regular versions, I can use it method properly. Here you can see how I did this:
 
 Change classname
 
@@ -163,6 +164,7 @@ poster.addEventListener('click', function changeMinWidth() {
 ```
 
 #### Checklist
+
 Done:
 
 -   Visually design page ✅
@@ -174,14 +176,14 @@ To do:
 -   Create carrousel
 -   [new] Make page more responsive
 
-
-### Sources
+#### Sources
 
 -   https://dmitripavlutin.com/fetch-with-json/
 -   https://stackoverflow.com/questions/21496905/how-to-change-the-background-image-of-div-using-javascript
 -   Stef Keuken
 
 ### Day 4 - More movie's and more struggles
+
 I've finally managed to add more movies! The way I did it, is to create an array of titles that I want to add. Then I can dynamically add those titles to the fetch link. I make sure to wait until all the fetches are done via a promise and when that's done, I display it on the page. I've had to do a lot of moving around in terms of functions, but at the end I got there. I do still have one issue however: whenever I click on a movie it expands, but every text shows simultaneously. In the screenshots you can see what I mean:
 
 ![image](https://github.com/spacejump3/web-app-from-scratch-2324/assets/112871518/4f5fee7c-d8a1-4955-b5fc-badb3fe8334b)
@@ -191,7 +193,8 @@ I've finally managed to add more movies! The way I did it, is to create an array
 It is almost the end of the week so I would like to be done so I can work on the teamwebsite. So hopefully I will be able to fix this by tomorrow.
 
 #### Clean code
-When trying to work on displaying multiple movies, Marten helped me a bit. He did tell me that some code can be made shorter, in particular the expand poster function. I wasn't able to make it cleaner today. So the plan is to make sure the app works correctly with my current code, and when that's done I will try to clean it as much as possible afterwards. 
+
+When trying to work on displaying multiple movies, Marten helped me a bit. He did tell me that some code can be made shorter, in particular the expand poster function. I wasn't able to make it cleaner today. So the plan is to make sure the app works correctly with my current code, and when that's done I will try to clean it as much as possible afterwards.
 
 #### Checklist
 
@@ -206,3 +209,24 @@ To do:
 
 -   [new] fix movie info issues
 -   Create carrousel
+
+### Day 5 - Finishing up
+
+#### Checklist
+
+Done:
+
+-   Visually design page ✅
+-   Develop function so I can easily add movies to the url ✅
+-   Make movies clickable for more info ✅
+-   Make page more responsive ✅
+-   fix movie info issues ✅
+
+To do:
+
+-   Create carrousel
+-   [new] create loading state
+
+#### Sources:
+
+-   https://dev.to/vaishnavs/displaying-loading-animation-on-fetch-api-calls-1e5m

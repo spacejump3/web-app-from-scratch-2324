@@ -42,26 +42,15 @@ h1 {
 }
 
 h2 {
-    margin: .5em 0 0 0;
+    margin: 0.5em 0 0 0;
     color: #f0c838;
     font-size: 2em;
     font-weight: 900;
-    text-shadow: 0.1em 0.1em 0.1em #0007;
+    text-shadow: 0.1em 0.1em 0.1em #000;
 }
 
 p {
     font-size: 1.2em;
-}
-
-@media (max-width: 600px) {
-    section:nth-of-type(1) {
-        margin: 3em;
-        max-width: 100%;
-    
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
 }
 
 section:nth-of-type(1) {
@@ -93,16 +82,9 @@ section:nth-of-type(1) {
     animation: scrolling 3s linear infinite;
 }
 
-.movieContainer {
+#movieListContainer {
     margin: 0;
-    height: 30em;
-    width: 100%;
-    background-color: #000;
-}
-
-ul {
-    margin: 0;
-    height: 30em;
+    height: 35em;
     display: flex;
     list-style: none;
     background-color: black;
@@ -110,7 +92,38 @@ ul {
 }
 
 .movieInfo {
-    transition: 0.8s;
+    transition: 0.3s;
+}
+
+.moviePoster {
+    height: 90%;
+    margin: auto 1em auto 1em;
+    padding: 0 1em 0 1em;
+    text-align: end;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.1em black;
+    background-color: #f0c838;
+    background-size: cover;
+
+    border-radius: 1.2em;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.moviePoster:focus-visible {
+    box-shadow: inset 0.1em 0.1em 1.5em #000, inset -0.1em -0.1em 1.5em #000;
+    outline: solid 0.5em #f0c838;
+    outline-offset: -0.25em;
+}
+
+.regularPoster {
+    min-width: 21em;
+}
+
+.extendedPoster {
+    min-width: 31em;
+    outline: solid 0.3em #f0c838;
 }
 
 .hidden {
@@ -143,28 +156,43 @@ li p {
     text-shadow: 0.1em 0.1em 0.1em #0007;
 }
 
-.moviePoster {
-    height: 100%;
-    margin: 0 1em 0 1em;
-    padding: 0 1em 0 1em;
-    text-align: end;
-    color: white;
-    text-shadow: 0.1em 0.1em 0.1em black;
-    background-color: #f0c838;
-    background-size: cover;
+@media (max-width: 600px) {
+    section:nth-of-type(1) {
+        margin: 3em;
+        max-width: 100%;
 
-    border-radius: 1.2em;
-    cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-    transition: 0.8s;
-}
+    img:first-of-type {
+        margin: 0 0 1em 0;
+    }
 
-.regularPoster {
-    min-width: 21em;
-}
+    #movieListContainer {
+        height: 30em;
+    }
 
-.extendedPoster {
-    min-width: 31em;
+    .movieInfo {
+        font-size: 1em;
+    }
+
+    .regularPoster {
+        min-width: 11em;
+    }
+
+    .extendedPoster {
+        min-width: 21em;
+    }
+
+    #title {
+        font-size: 1.5em;
+    }
+
+    #imdbRating {
+        font-size: 1.5em;
+    }
 }
 
 footer {
