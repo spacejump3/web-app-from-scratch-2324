@@ -9,7 +9,7 @@ const favoriteMovies = ['memento', 'kill+bill', 'oppenheimer', 'rush+hour', `sch
 // fetching API JSON data and adding my favorite movies
 async function getData() {
     const promises = favoriteMovies.map(async title => {
-        const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${encodeURIComponent(title)}`);
+        const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${encodeURIComponent(title)}`);
         return await response.json();
     })
     return Promise.all(promises)
