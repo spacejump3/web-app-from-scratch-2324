@@ -212,6 +212,10 @@ To do:
 
 ### Day 5 - Finishing up
 
+Today I mostly got around to finishing the last few things up. I fixed the way info is displayed and added back the dark linear gradient. I also added a focus state to the list of movies. I can't open it without using a mouse though. I would like have a way to use the click event listener with the enter key as well. Another thing I would like to add is a loading state. My teammate mentioned that the movies take a while to load. So I would like to show a loading animation while the API is fetching and when that's done it has to be removed.
+
+We as a team also started working on the teamwebsite. It's now possible for us to exchange data back and forth. So the project is heading in a good direction.
+
 #### Checklist
 
 Done:

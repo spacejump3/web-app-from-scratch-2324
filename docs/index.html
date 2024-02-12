@@ -15,25 +15,23 @@
     <body>
         <main>
             <section>
-                <img src="./img/stephan.jpg" alt="stephan" />
+                <img id="avatar" alt="stephan" />
                 <div class="introText">
-                    <h1>Stephan's favoriete films</h1>
-                    <p>Stephan is een hele leuke jongen. Hij heeft ook nog eens een leuke hobby: films! Op deze pagina kan je zijn favoriete films bekijken...</p>
+                    <h1>Stephan's favorite films</h1>
+                    <p id="description"></p>
+                    <p>Here are some more facts about Stephan:</p>
+                    <ul class="stephanInfo">
+                        <li id="hobbys">Hobbys: </li>
+                        <li id="city">City: </li>
+                        <li id="favoritePets">Favorite pet: </li>
+                    </ul>
+                    <p>If you wish to return to the teampage, click on the button below:</p>
+                    <a href="https://kitch41.github.io/WAFS-Team-1/" class="btn" tabindex="1">Team page</a>
                 </div>
             </section>
             <section class="filmStrip">
                 <div class="perfPattern"></div>
-                <ul id='movieListContainer'>
-                    <!-- <li class='moviePoster regularPoster'></li> -->
-                    <!-- <li class="moviePoster regularPoster">
-                        <h2 id="title" class="movieInfo hidden"></h2>
-                        <p id="year" class="movieInfo hidden"></p>
-                        <p id="plot" class="movieInfo hidden"></p>
-                        <p id="genre" class="movieInfo hidden"></p>
-                        <p id="director" class="movieInfo hidden"></p>
-                        <p id="imdbRating" class="movieInfo hidden"></p>
-                    </li> -->
-                </ul>
+                <ul id="movieListContainer"></ul>
                 <div class="perfPattern"></div>
             </section>
         </main>

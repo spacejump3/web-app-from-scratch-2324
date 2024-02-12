@@ -1,7 +1,19 @@
-const favoriteMovies = ['memento', 'kill+bill', 'oppenheimer', 'rush+hour', `schindler's+list`, 'empire+strikes+back', 'arrival', 'shutter+island', 'se7en', 'fight+club', 'star+wars', 'django+unchained']
+// local api fetch
+async function fetchLocalData() {
+    const response = await fetch('./info.json');
+    const data = await response.json();
 
-// // testing w/ 2 movie
-// const favoriteMovies = ['memento', 'rush+hour']
+    description.innerHTML = data.description
+    hobbys.innerHTML += data.hobbys
+    city.innerHTML += data.city
+    favoritePets.innerHTML += data.favoritePets
+    avatar.src = data.avatar
+}
+
+fetchLocalData()
+
+// OMDB api fetch
+const favoriteMovies = ['memento', 'kill+bill', 'oppenheimer', 'rush+hour', `schindler's+list`, 'empire+strikes+back', 'arrival', 'shutter+island', 'se7en', 'fight+club', 'star+wars', 'django+unchained', 'blade+runner']
 
 // fetching API JSON data and adding my favorite movies
 async function getData() {
