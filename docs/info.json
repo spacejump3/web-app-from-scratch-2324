@@ -1,8 +1,11 @@
 {
-    "name": "Stephan Sierra Perdomo",
-    "avatar": "https://spacejump3.github.io/web-app-from-scratch-2324/img/stephan.jpg",
+    "firstName": "Stephan",
+    "lastName": "Sierra Perdomo",
+    "avatar_url": "https://spacejump3.github.io/web-app-from-scratch-2324/img/stephan.jpg",
+    "age": 22,
     "city": "Maarssen",
-    "description": "Stephan is a very nice young lad. He also has a very fun hobby: watching films! On this webpage you can observe his favorite films...",
-    "favoritePets": "birds",
-    "hobbys": ["gaming", "films"]
+    "hobbies" : ["Films", "Gaming", "Creating"],
+    "truthsAndLies" : ["I can solve a Rubik's Cube", "I've been on a TV program", "I own a Mazda MX"],
+    "bio" : "Stephan is a nice young lad with curly hair. He likes to game a lot which is sometimes (mostly) detrimental to his productivity.",
+    "favouriteAnimal" : "Humpback whale"
 }

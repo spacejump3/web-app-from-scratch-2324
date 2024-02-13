@@ -3,11 +3,11 @@ async function fetchLocalData() {
     const response = await fetch('./info.json');
     const data = await response.json();
 
-    description.innerHTML = data.description
-    hobbys.innerHTML += data.hobbys
+    bio.innerHTML = data.bio
+    hobbies.innerHTML += data.hobbies
     city.innerHTML += data.city
-    favoritePets.innerHTML += data.favoritePets
-    avatar.src = data.avatar
+    favouriteAnimal.innerHTML += data.favouriteAnimal
+    avatar_url.src = data.avatar_url
 }
 
 fetchLocalData()
