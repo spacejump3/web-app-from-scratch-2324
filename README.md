@@ -1,7 +1,8 @@
 # Web App From Scratch @cmda-minor-web 2023 - 2024
 
 ## Documentation
-Welcome to Stephan's favourite films app! On this small webapp you can check out some movies I enjoy to watch. The movies are being fetched using the Open Movie Database API. With this API I can retrieve a bunch of data including the title, plot, poster, ImdB rating and much more. 
+
+Welcome to Stephan's favourite films app! On this small webapp you can check out some movies I enjoy to watch. The movies are being fetched using the Open Movie Database API. With this API I can retrieve a bunch of data including the title, plot, poster, ImdB rating and much more.
 
 ## Process report
 
@@ -233,3 +234,43 @@ To do:
 #### Sources:
 
 -   https://dev.to/vaishnavs/displaying-loading-animation-on-fetch-api-calls-1e5m
+
+### Final week finishing touches
+
+In the final week I haven't added too many new features to my personal website as I was mostly done and I had to work on the teampage. Still, there are some things that I've added this week to make things a bit nicer.
+
+#### Loading state
+
+I created a loading state since a teammate told me my page took a while to load the first time. I made a simple loading animation and added it to the spot where the movie list is shown. Whenever the API is done fetching, the loader will get removed.
+
+```js
+const loader = document.querySelector('.loader');
+
+// remove loader when data is loaded
+getData().then((data) => {
+    loader.classList.add('remove');
+    console.log(data);
+});
+```
+
+![alt text](image.png)
+
+#### Navigation without mouse
+
+I wanted to make the website usable without a mouse as a nice accessibility feature. To do this I added a some focus state and tab indexes to the relevant elements. With the list items (moviepsoter) I still needed to find a way to open it without clicking on the mouse. I also wanted the movieposter to extend with a enter or spacebar press. Simply seperating the eventlistener and adding another one below it did the trick:
+
+```js
+poster.addEventListener('click', changeMinWidth);
+
+poster.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+        changeMinWidth();
+    }
+});
+```
+
+#### Custom scrollbar
+
+When it came to the scrollbar, I didn't really think of it needing customization since it already looked pretty good. But after I realized I've been working in Firefox the whole time, the scrollbar definitely needs an upgrade in other browsers. I simply made the background invisible and the thumb yellow so it fits the style better. It also looks decent in other browsers now.
+
+![alt text](image-1.png)

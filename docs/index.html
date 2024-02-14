@@ -15,11 +15,10 @@
     <body>
         <main>
             <section>
-                <img id="avatar_url" alt="stephan" />
+                <img id="avatar_url" alt="headshot of Stephan" />
                 <div class="introText">
                     <h1>Stephan's favourite films</h1>
-                    <p>On this personal page you can find Stephan's favourite films of all time! Please let him know personally if you don't agree with this list, he'd love to discuss!
-                    </p>
+                    <p>On this personal page you can find Stephan's favourite films of all time! Please let him know personally if you don't agree with this list, he'd love to discuss!</p>
                     <h2>About Stephan</h2>
                     <p id="bio"></p>
                     <p>Here are some more facts about Stephan:</p>
@@ -29,10 +28,14 @@
                         <li id="favouriteAnimal">Favorite animal: </li>
                     </ul>
                     <p>If you wish to return to the teampage, click on the button below:</p>
-                    <a href="https://kitch41.github.io/web-app-from-scratch-2324-team-Cascading-style-peepz/" class="btn" tabindex="1" target='_blank'>Team page</a>
+                    <a href="https://kitch41.github.io/web-app-from-scratch-2324-team-Cascading-style-peepz/" class="btn" tabindex="1" target="_blank">Team page</a>
                 </div>
             </section>
             <section class="filmStrip">
+                <div class="loader">
+                    <img src="./animations/loading.gif" alt="loading animation" class="loadingAnim" />
+                    <p>Loading films...</p>
+                </div>
                 <div class="perfPattern"></div>
                 <ul id="movieListContainer"></ul>
                 <div class="perfPattern"></div>
