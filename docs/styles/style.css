@@ -46,8 +46,6 @@ p {
     text-align: center;
     outline: solid #000 0.2em;
     border-radius: 0.5em;
-
-    transition: 0.2s;
 }
 
 .btn:hover {
@@ -118,7 +116,24 @@ h2 {
     background-image: url('../img/perf-pattern_Tekengebied 1.png');
     background-size: 10em;
     background-repeat: repeat-x;
-    animation: scrolling 3s linear infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .perfPattern {
+        animation: scrolling 3s linear infinite;
+    }
+
+    .moviePoster {
+        transition: 0.3s;
+    }
+
+    .movieInfo {
+        transition: 0.3s;
+    }
+
+    .btn {
+        transition: 0.2s;
+    }
 }
 
 #movieListContainer {
@@ -128,10 +143,6 @@ h2 {
     list-style: none;
     background-color: #000;
     overflow: scroll;
-}
-
-.movieInfo {
-    transition: 0.3s;
 }
 
 .moviePoster {
@@ -146,8 +157,6 @@ h2 {
 
     border-radius: 1.2em;
     cursor: pointer;
-
-    transition: 0.3s;
 }
 
 .moviePoster:focus-visible {
@@ -199,6 +208,12 @@ li p {
     text-shadow: 0.1em 0.1em 0.1em #0007;
 }
 
+footer {
+    margin: 2em 0 2em 0;
+    opacity: 0.5;
+    text-align: center;
+}
+
 @media (max-width: 600px) {
     section:nth-of-type(1) {
         margin: 3em;
@@ -236,10 +251,4 @@ li p {
     #imdbRating {
         font-size: 1.5em;
     }
-}
-
-footer {
-    margin: 2em 0 2em 0;
-    opacity: 0.5;
-    text-align: center;
 }
