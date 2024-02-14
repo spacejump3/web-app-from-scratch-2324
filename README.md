@@ -274,3 +274,27 @@ poster.addEventListener('keydown', function (event) {
 When it came to the scrollbar, I didn't really think of it needing customization since it already looked pretty good. But after I realized I've been working in Firefox the whole time, the scrollbar definitely needs an upgrade in other browsers. I simply made the background invisible and the thumb yellow so it fits the style better. It also looks decent in other browsers now.
 
 ![alt text](image-1.png)
+
+#### Prefers reduced motion
+
+On the last day it came to my attention that prefer-reduced-motion is a thing and it definitely applies to my website. Since I have a constant moving object in on my website, this should be turned off when animations are turned off in the operating system. Doing this is very simple. I just need to add a prefers-reduced-motion media query with 'no preference' and add all my animated elements in there. That way there's always animated object except when the reduced motion setting is turned on. 
+
+```css
+@media (prefers-reduced-motion: no-preference) {
+    .perfPattern {
+        animation: scrolling 3s linear infinite;
+    }
+
+    .moviePoster {
+        transition: 0.3s;
+    }
+
+    .movieInfo {
+        transition: 0.3s;
+    }
+
+    .btn {
+        transition: 0.2s;
+    }
+}
+```
