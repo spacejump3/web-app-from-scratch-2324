@@ -7,5 +7,6 @@
     "hobbies" : ["Films", "Gaming", "Creating"],
     "truthsAndLies" : ["I can solve a Rubik's Cube", "I've been on a TV program", "I own a Mazda MX"],
     "bio" : "Stephan is a nice young lad with curly hair. He likes to game a lot which is sometimes (mostly) detrimental to his productivity.",
-    "favouriteAnimal" : "Humpback whale"
+    "favouriteAnimal" : "Humpback whale",
+    "github": "https://github.com/spacejump3/web-app-from-scratch-2324"
 }

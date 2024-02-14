@@ -13,15 +13,20 @@ async function fetchLocalData() {
 fetchLocalData()
 
 // OMDB api fetch
-const favoriteMovies = ['memento', 'kill+bill', 'oppenheimer', 'rush+hour', `schindler's+list`, 'empire+strikes+back', 'arrival', 'shutter+island', 'se7en', 'fight+club', 'star+wars', 'django+unchained', 'blade+runner']
+const favoriteMovies = ['memento', 'kill+bill', 'spider+man', 'oppenheimer', 'rush+hour', `schindler's+list`, 'empire+strikes+back', 'arrival', 'shutter+island', 'se7en', 'fight+club', 'star+wars', 'django+unchained', 'blade+runner']
 
 // fetching API JSON data and adding my favorite movies
 async function getData() {
-    const promises = favoriteMovies.map(async title => {
-        const response = await fetch(`https://www.omdbapi.com/?apikey=54a87690&t=${encodeURIComponent(title)}`);
-        return await response.json();
-    })
-    return Promise.all(promises)
+    try {
+        const promises = favoriteMovies.map(async title => {
+            const response = await fetch(`https://www.omdbapi.com/?apikey=54a87690&t=${encodeURIComponent(title)}`);
+            return await response.json();
+        })
+        return Promise.all(promises)
+
+    } catch (error) {
+        console.error(error)
+    }
 }
 
 // function to display the movies fetched from the API
