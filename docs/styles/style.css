@@ -44,9 +44,10 @@ p {
     color: #000;
     width: 7em;
     text-align: center;
-    outline: solid #000 .2em;
+    outline: solid #000 0.2em;
+    border-radius: 0.5em;
 
-    transition: .2s;
+    transition: 0.2s;
 }
 
 .btn:hover {
@@ -56,7 +57,7 @@ p {
 }
 
 .btn:focus {
-    outline: solid #FFF .4em;
+    outline: solid #fff 0.4em;
     background-color: #000;
     color: #f0c838;
     font-weight: 900;
@@ -66,6 +67,7 @@ img:first-of-type {
     margin: auto 3em auto 0;
     width: 100%;
     max-width: 25em;
+    border-radius: 1em;
 
     background-color: #000;
     box-shadow: 0.4em 0.4em 1em #0005;
@@ -152,6 +154,10 @@ h2 {
     box-shadow: inset 0.1em 0.1em 1.5em #000, inset -0.1em -0.1em 1.5em #000;
     outline: solid 0.5em #f0c838;
     outline-offset: -0.25em;
+}
+
+.moviePoster:hover {
+    outline: solid 0.3em #f0c838;
 }
 
 .regularPoster {

@@ -1,10 +1,7 @@
 # Web App From Scratch @cmda-minor-web 2023 - 2024
 
-In this readme file you can find everything you need to know about this webapp. More intro text add later....
-
-## How to install
-
-Install guide (don't know if needed)
+## Documentation
+Welcome to Stephan's favourite films app! On this small webapp you can check out some movies I enjoy to watch. The movies are being fetched using the Open Movie Database API. With this API I can retrieve a bunch of data including the title, plot, poster, ImdB rating and much more. 
 
 ## Process report
 
@@ -213,6 +210,8 @@ To do:
 ### Day 5 - Finishing up
 
 Today I mostly got around to finishing the last few things up. I fixed the way info is displayed and added back the dark linear gradient. I also added a focus state to the list of movies. I can't open it without using a mouse though. I would like have a way to use the click event listener with the enter key as well. Another thing I would like to add is a loading state. My teammate mentioned that the movies take a while to load. So I would like to show a loading animation while the API is fetching and when that's done it has to be removed.
+
+![alt text](image-1.png)
 
 We as a team also started working on the teamwebsite. It's now possible for us to exchange data back and forth. So the project is heading in a good direction.
 
